@@ -39,7 +39,7 @@ public class StockinfoService {
 	private void sendRequestToEStockMarketApp(StockDetailsModelDTO stockDetailsModelDTO) {
 		LOGGER.info("Sending stock details to EStockMarketApp via RabbitMQ");
 		LOGGER.info("stockInfoModelDTO: "+stockDetailsModelDTO);
-		rabbitTemplate.convertAndSend("Queue-AddStock", stockDetailsModelDTO);
+//		rabbitTemplate.convertAndSend("Queue-AddStock", stockDetailsModelDTO);
 	}
 
 	private StockDetailsModelDTO getStockInfoByIf(Long id) {
